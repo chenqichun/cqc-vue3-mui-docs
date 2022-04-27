@@ -27,7 +27,13 @@ module.exports = {
         {
           collapsable: false,
           children: [
-            [ 'toast', '消息提示']
+            [ 'toast', 'Toast提示']
+          ]
+        },
+        {
+          collapsable: false,
+          children: [
+            [ 'loading', 'Loading弹框']
           ]
         },
       ]

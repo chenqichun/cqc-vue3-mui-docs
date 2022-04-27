@@ -19,7 +19,14 @@
       </div>
     </div>
     </div>
-    <div class="right"></div>
+    <div class="right" v-if="src">
+      <div class="iframe-wraper">
+        <iframe width="100%" height="100%" :src="src" />
+      </div>
+    </div>
+    <div class="message-tip" ref="messageTip">
+      复制成功
+    </div>
   </div>
 </template>
 
@@ -29,7 +36,8 @@ export default {
   props: {
     title: String,
     section: String,
-    content: String
+    content: String,
+    src: String
   },
   data() {
     return {
@@ -56,6 +64,10 @@ export default {
       textarea.select()
       document.execCommand('copy')
       document.body.removeChild(textarea)
+      this.$refs.messageTip.style.display = 'block'
+      setTimeout(() => {
+        this.$refs.messageTip.style.display = 'none'
+      }, 1500);
     },
     escape(str) {
       str = str.replace(/&/g, '&amp;').replace(/</g, '&lt;')
@@ -76,8 +88,40 @@ export default {
 <style lang="scss">
 .demo-block {
   position: relative;
-  display: flex;
-  align-items: flex-start;
+  padding-right: 310px;
+  iframe {
+    border: none;
+  }
+  .message-tip {
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    border-radius: 4px;
+    color: #67c23A;
+    background: #e1f3d8;
+    z-index: 999;
+    display: none;
+  }
+  .right {
+    position: fixed;
+    top: 82px;
+    right: 10px;
+    z-index: 3;
+    background: url('/phone.png') no-repeat;
+    background-size: 100% 100%;
+    width: 300px;
+    height: 650px;
+    .iframe-wraper {
+      position: absolute;
+      top: 50px;
+      left: 10px;
+      right: 10px;
+      bottom: 88px;
+      background: #fff;
+    }
+  }
   .example {
     padding: 24px;
   }

@@ -2,7 +2,7 @@
 
 ## 基本用法
 
-<demo-block>
+<demo-block src="http://localhost:8081/#/toast">
 :::slot descript
 用法 Toast(opts) opts可以是字符串 或者 对象
 调用后返回一个实例，实例上有close()方法，
@@ -55,4 +55,9 @@ export default {
 
 |参数|说明|类型|可选值|默认值|
 |:----:|:----:|:----:|:----:|:----:|
-||||||
+|message|要展示的内容|string|-|-|
+|position|显示的位置|string|top/middle/bottom|middle|
+|icon|显示的图标|string|success/warn/error|-|
+|duration|显示的时长,毫秒|number|-|2500|
+|className|添加class名|string|-|-|
+
