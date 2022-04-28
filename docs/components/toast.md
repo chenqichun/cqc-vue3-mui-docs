@@ -2,7 +2,7 @@
 
 ## 基本用法
 
-<demo-block src="http://localhost:8081/#/toast">
+<demo-block src="/toast">
 :::slot descript
 用法 Toast(opts) opts可以是字符串 或者 对象
 调用后返回一个实例，实例上有close()方法，

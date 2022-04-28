@@ -19,9 +19,10 @@
       </div>
     </div>
     </div>
-    <div class="right" v-if="src">
+    <div class="right" v-if="src" :style="{transform: `translateX(${showPhone ? 0 : '100%'})`}">
+      <div class="hidePhone" @click="showPhone = !showPhone">{{showPhone ? '收起' : '展开'}}</div>
       <div class="iframe-wraper">
-        <iframe width="100%" height="100%" :src="src" />
+        <iframe width="100%" height="100%" :src="$url_base + src" />
       </div>
     </div>
     <div class="message-tip" ref="messageTip">
@@ -42,7 +43,8 @@ export default {
   data() {
     return {
       show: false,
-      codeHeight: 0
+      codeHeight: 0,
+      showPhone: true
     }
   },
   mounted() {
@@ -109,10 +111,23 @@ export default {
     top: 82px;
     right: 10px;
     z-index: 3;
-    background: url('/phone.png') no-repeat;
+    background: url('http://www.chenqichun.com/lib/vue3-mui-docs/phone.png') no-repeat;
     background-size: 100% 100%;
     width: 300px;
     height: 650px;
+    transition: all 0.3s ease;
+    .hidePhone {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translate(-100%, -50%);
+      border: 1px solid #dbdbdb;
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+      padding: 4px 6px;
+      width: 15px;
+      cursor: pointer;
+    }
     .iframe-wraper {
       position: absolute;
       top: 50px;

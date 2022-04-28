@@ -36,6 +36,54 @@ module.exports = {
             [ 'loading', 'Loading弹框']
           ]
         },
+        {
+          collapsable: false,
+          children: [
+            [ 'range', 'range滑条']
+          ]
+        },
+        {
+          collapsable: false,
+          children: [
+            [ 'switch', 'switch开关']
+          ]
+        },
+        {
+          collapsable: false,
+          children: [
+            [ 'slide', 'slide滑动选择/删除']
+          ]
+        },
+        {
+          collapsable: false,
+          children: [
+            [ 'scroll', 'scroll滚动']
+          ]
+        },
+        {
+          collapsable: false,
+          children: [
+            [ 'load-more', 'loader-more 上拉加载/下拉刷新']
+          ]
+        },
+        {
+          collapsable: false,
+          children: [
+            [ 'infinite-scroll', 'infinite-scroll无限滚动']
+          ]
+        },
+        {
+          collapsable: false,
+          children: [
+            [ 'sign-board', 'sign-board画板']
+          ]
+        },
+        {
+          collapsable: false,
+          children: [
+            [ 'waitting', '未完待续...']
+          ]
+        },
       ]
     }
   }

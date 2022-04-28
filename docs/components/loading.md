@@ -2,7 +2,7 @@
 
 ## 基本用法
 
-<demo-block src="http://localhost:8081/#/loading">
+<demo-block src="/loading">
 :::slot descript
 引入Loading, Loading.open()打开, Loading.close()关闭
 :::

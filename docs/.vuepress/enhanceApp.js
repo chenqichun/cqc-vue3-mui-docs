@@ -8,6 +8,7 @@ Vue.directive('highlight', el => {
     hl.highlightBlock(block)
   })
 })
+Vue.prototype.$url_base = 'http://www.chenqichun.com/lib/v3-moblie/#'
 
 export default ({
   Vue, // VuePress 正在使用的 Vue 构造函数
