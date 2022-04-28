@@ -2,6 +2,12 @@
   <div class="introduce">
     <h1>介绍</h1>
     <p class="description">cqc-vue3-mui是一个基于vue3开发的移动端ui库</p>
+    <p>
+      <a target="_blank" href="http://www.chenqichun.com/lib/vue3-ui-docs">cqc-vue3-ui -  vue3的pc端版本</a>
+    </p>
+    <p>
+      <a target="_blank" href="http://www.chenqichun.com/lib/vue2-ui-docs">cqc-vue2-ui -  vue2的pc端版本</a>
+    </p>
     <p>扫码体验</p>
     <img src="http://www.chenqichun.com/lib/vue3-mui-docs/moblie.png" alt="" style="width: 200px;">
     <br />
